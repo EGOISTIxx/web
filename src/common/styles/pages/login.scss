@@ -1,0 +1,51 @@
+.login-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  div {
+    width: 100%;
+    text-align: center;
+    h1 {
+      color: #fff;
+      font-size: 44px !important;
+      margin-bottom: 25px;
+      font-family: Open Sans !important;
+      font-style: normal;
+      font-weight: bold;
+    }
+  }
+
+  .wrapper {
+
+    .Wrapper {
+      display: flex;
+      flex-direction: column;
+      height: 80px;
+      border-radius: 4px;
+    }
+
+    .error {
+      text-align: left;
+      font-size: 12px;
+      line-height: 16px;
+      color: #ee4141;
+    }
+  }
+
+  .toRegistration {
+    width: 100%;
+    color: #fff;
+    text-align: left;
+
+    a {
+      color: #cccccc;
+      transition: color .3s ease-in-out;
+
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+}

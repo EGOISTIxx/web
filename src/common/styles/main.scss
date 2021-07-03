@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap');
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.swiper-container-horizontal
+  > .swiper-pagination-progressbar {
+  background: rgba(0, 0, 0, 0.5) !important;
+  width: 100%;
+  height: 4px;
+  left: 0;
+  top: 79vh !important;
+  bottom: 0;
+}
+
+.swiper-container {
+  .swiper-pagination-progressbar-fill {
+    background: #757575;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 11px;
+  height: 11px;
+}
+::-webkit-scrollbar-thumb {
+  background: #666666;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #bdbdbd;
+}
+::-webkit-scrollbar-track {
+  background: #ffffff;
+  border-radius: 0px;
+  box-shadow: inset 4px 4px 30px #000000;
+}

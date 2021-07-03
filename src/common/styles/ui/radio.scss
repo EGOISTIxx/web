@@ -1,0 +1,26 @@
+input[type='radio']{
+  visibility: hidden;
+  height: 0;
+  width: 0;
+}
+
+label {
+  display: table-cell;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column !important;
+  background: #454545;
+  color: white;
+  transition: all .3s ease-in-out;
+  height: calc(250px + 100 * (100vh/1080));
+  width: calc(175px + 100 * (100vw/1920));
+  border: 2px solid rgb(70, 70, 70);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+input[type='radio']:checked + label {
+  border: 1px solid rgb(167, 167, 167);
+  box-shadow: 2px 2px 5px rgb(161, 161, 161);
+}

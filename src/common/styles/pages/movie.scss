@@ -1,0 +1,226 @@
+.movie {
+  min-height: 100vh;
+  width: 100%;
+
+  .movie__bg {
+    height: 80vh;
+    width: 100%;
+
+    &::after {
+      content: '';
+      position: absolute;
+      box-shadow: 0px -375px 600px -50px rgb(24, 24, 24)
+        inset;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 80vh;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .movie__content {
+    width: 100%;
+    min-height: 100vh;
+    z-index: 6;
+    background: rgb(24, 24, 24);
+    color: #fff;
+
+    .movie__title {
+      text-align: center;
+      font-size: 45px;
+      text-transform: uppercase;
+    }
+
+    .movie__raiting {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-column-gap: 2em;
+
+      .svg_kino {
+        display: flex;
+        align-items: center;
+        align-items: center;
+        margin-right: 8px;
+      }
+
+      .rating {
+        font-size: 30px;
+      }
+
+      .rating-kinopoisk {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+      }
+
+      .rating-imdb {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+      }
+    }
+
+    .movie__desc {
+      margin: 55px 55px 0;
+
+      .desc-watch {
+        .title-info {
+          font-size: 45px;
+          font-weight: bold;
+          margin-bottom: 45px;
+        }
+
+        .swiper-container {
+          height: 70%;
+
+          .swiper-pagination-bullet {
+            border: 1px solid #fff;
+            width: 13px;
+            height: 13px;
+            background: #757575;
+          }
+
+          .swiper-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+
+        .player {
+          margin: 20px 0 30px;
+          border: 1px solid rgb(153, 153, 153);
+          // height: calc(675px + 340 * (100vw / 1920));
+
+          .change-video {
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2),
+              0 4px 6px rgba(0, 0, 0, 0.2);
+            margin-top: 20px;
+            margin-bottom: 10px;
+            border: 6px solid #bfe2ff;
+            transition: box-shadow 0.3s linear;
+            cursor: pointer;
+            background: #bfe2ff;
+
+            &.active {
+              border: 6px solid #00b3ff;
+              box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2),
+                0 16px 20px rgba(0, 0, 0, 0.2);
+              color: #fff;
+              background: #00b3ff;
+            }
+          }
+
+          .player-trailer {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+
+      .desc-data {
+        .desc-data-header {
+          font-size: 45px;
+          font-weight: bold;
+          margin-bottom: 15px;
+        }
+
+        .desc__data-more {
+          margin-bottom: 30px;
+        }
+
+        .desc__information {
+          padding-bottom: 45px;
+
+          .info-title {
+            font-size: 45px;
+            font-weight: bold;
+            margin-bottom: 15px;
+          }
+
+          .info-template {
+            display: grid;
+            row-gap: 15px;
+
+            .info-item {
+              display: grid;
+              grid-template-columns: repeat(2, 1fr);
+            }
+          }
+        }
+      }
+    }
+
+    .movie__comments {
+      margin: 55px 55px 0;
+    }
+  }
+}
+
+.video-js,
+.playlist-container {
+  h1{
+    text-align: center;
+  }
+
+  position: relative;
+  min-width: 300px;
+  min-height: 380px;
+  height: 0;
+}
+
+.video-js {
+  flex: 3 1 70%;
+}
+
+.playlist-container {
+  flex: 1 1 30%;
+}
+
+.vjs-fluid {
+  padding-top: 0;
+}
+
+.vjs-playlist {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  list-style-type: none;
+}
+
+.playlist__wrapper {
+  min-height: 400px;
+  // display: flex;
+  // align-items: center;
+  // justify-content: space-around;
+  // flex-direction: column;
+}
+
+.vjs-playlist-item {
+  cursor: pointer;
+  overflow: hidden;
+  width: calc(150px + 140 * (100vw / 1920));
+  height: calc(105px + 100 * (100vh / 1080));
+  // z-index: 1000;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 20px;
+
+  div {
+    img {
+      border-radius: 10px;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

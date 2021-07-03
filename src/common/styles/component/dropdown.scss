@@ -1,0 +1,46 @@
+.dropdown {
+  position: absolute;
+  right: 20px;
+  top: 12vh;
+  background: #fff;
+  display: block;
+  border-radius: 5px;
+  width: 180px;
+  height: 105px;
+
+  &.close {
+    display: none;
+  }
+
+  .dropdown-list {
+    height: 100%;
+    list-style-type: none;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+    font-size: 15px;
+
+    a {
+      text-decoration: none;
+      color: #000;
+      height: 100%;
+
+      li {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:first-child:hover {
+          border-radius: 5px;
+        }
+
+        &:hover {
+          background: rgb(156, 156, 156);
+        }
+      }
+    }
+  }
+}

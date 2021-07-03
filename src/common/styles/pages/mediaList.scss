@@ -1,0 +1,220 @@
+.media__wrapper {
+  min-height: 100vh;
+  background: #181818;
+  color: #fff;
+  padding: 14vh 5% 0;
+
+  .paginationBttns {
+    margin-top: 50px;
+    height: 40px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+  }
+
+  .paginationBttns a {
+    padding: 10px;
+    margin: 8px;
+    border-radius: 5px;
+    border: 1px solid #2b2eff;
+    color: #2b2eff;
+    cursor: pointer;
+  }
+
+  .paginationBttns a:hover {
+    color: white;
+    background-color: #2b2eff;
+  }
+
+  .paginationActive a {
+    color: white;
+    background-color: #2b2eff;
+  }
+
+  .paginationDisabled a {
+    display: none;
+    color: grey;
+    background-color: grey;
+  }
+
+  .filter {
+    height: 500px;
+    border: 2px solid rgb(206, 206, 206);
+    margin-bottom: 50px;
+    border-radius: 10px;
+    background: #272727;
+  }
+
+  .media-list {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    row-gap: 1rem;
+
+    div {
+      width: calc(100px + 100 * (100vw / 1920));
+
+      a {
+        text-decoration: none;
+        color: #fff;
+
+        .media-item {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+
+          .media-img {
+            width: 100%;
+            height: 90%;
+            position: relative;
+            
+            .raiting {
+              color: #fff;
+              position: absolute;
+              bottom: 0;
+              height: 25px;
+              background: rgba($color: rgb(31, 31, 31), $alpha: 0.5);
+              display: flex;
+              align-items: center;
+              justify-content: space-around;
+              width: 100%;
+
+              div {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                img {
+                  width: 25px;
+                  height: 15px;
+                  margin-right: 5px;
+                }
+              }
+
+              .rat-kinopoisk {
+                img {
+                  width: 15px;
+                  height: 15px;
+                }
+              }
+            }
+
+            img {
+              border-radius: 5px;
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+
+          .media-title {
+            .media-text {
+              overflow: hidden;
+              white-space: nowrap;
+              text-overflow: ellipsis;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .filter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .option-select {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+
+      .select-items {
+        h1 {
+          text-align: center;
+          margin: 10px 0;
+        }
+
+        select {
+          font-size: 20px;
+          option {
+            font-size: 15px;
+          }
+        }
+
+        select {
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          -ms-appearance: none;
+          appearance: none;
+          outline: 0;
+          box-shadow: none;
+          border: 0 !important;
+          background: #181818;
+          background-image: none;
+        }
+
+        select::-ms-expand {
+          display: none;
+        }
+
+        .select {
+          position: relative;
+          display: flex;
+          width: 20em;
+          height: 3em;
+          line-height: 3;
+          background: #2c3e50;
+          overflow: hidden;
+          border-radius: 0.25em;
+        }
+
+        select {
+          flex: 1;
+          padding: 0 0.5em;
+          color: #fff;
+          cursor: pointer;
+        }
+
+        .select::after {
+          content: '\25BC';
+          position: absolute;
+          top: 0;
+          right: 0;
+          padding: 0 1em;
+          background: #000000;
+          cursor: pointer;
+          pointer-events: none;
+          -webkit-transition: 0.25s all ease;
+          -o-transition: 0.25s all ease;
+          transition: 0.25s all ease;
+        }
+
+        .select:hover::after {
+          color: #2b2eff;
+        }
+      }
+    }
+
+    .some-raiting {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: space-around;
+
+      .makeStyles-root-1 {
+        width: 30% !important;
+      }
+    }
+
+    .MuiSlider-markLabel {
+      color: #fff;
+    }
+
+    .MuiSlider-root {
+      color: #2b2eff;
+    }
+  }
+}

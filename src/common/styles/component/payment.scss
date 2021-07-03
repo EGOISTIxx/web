@@ -1,0 +1,47 @@
+.payment {
+  height: 100vh;
+  background: #181818;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  h1 {
+    color: #fff;
+    margin-bottom: 25px;
+  }
+
+  .wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 55px;
+
+    .card {
+      .card-data {
+        width: 100%;
+        height: 100%;
+
+        .card-info {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          flex-direction: column;
+
+          .card-period {
+            text-transform: uppercase;
+            font-size: calc(17.5px + 10 * (100vw/1920));
+            font-weight: 600;
+          }
+
+          .card-price {
+            font-size: calc(25px + 10 * (100vw/1920));
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+}
